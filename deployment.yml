@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-calci-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-calci-app
+  template:
+    metadata:
+      labels:
+        app: java-calci-app
+    spec:
+      containers:
+      - name: java-calci-container
+        image: nanivardhan/calciapp:v1.0
+        command: ["java", "Calculator"]
