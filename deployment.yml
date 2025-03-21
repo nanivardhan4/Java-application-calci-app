@@ -13,6 +13,6 @@ spec:
         app: java-calci-app
     spec:
       containers:
-      - name: java-calci-container
+      - name: nanivardhan/calciapp
         image: nanivardhan/calciapp:v1.0
         command: ["java", "Calculator"]
